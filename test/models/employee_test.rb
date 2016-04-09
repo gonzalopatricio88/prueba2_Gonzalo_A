@@ -9,7 +9,7 @@ class EmployeeTest < ActiveSupport::TestCase
 
     employee = employees(:one)
     employee.name = nil
-    assert employee.valid?, 'employee must be a name'
+    assert_not employee.valid?, 'employee must be a name'
 
   end
 end
